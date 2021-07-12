@@ -6,9 +6,9 @@ pipeline {
       terraform 'Terraform-1'
     }
     stages {
-        stage ("terraform init") {
+        stage ("terraform init -reconfigure") {
             steps {
-                sh 'terraform init'
+                sh 'terraform init -reconfigure'
             }
         }
         stage ("terraform validate") {
