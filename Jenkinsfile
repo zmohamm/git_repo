@@ -16,9 +16,9 @@ pipeline {
                 sh 'terraform validate'
             }
         }
-        stage ("terraform plan") {
+        stage ("terraform plan -lock=false ") {
             steps {
-                sh 'terraform plan -out=plan'
+                sh 'terraform plan -out=plan -lock=false'
             }
         }
         stage ("terraform apply") {
