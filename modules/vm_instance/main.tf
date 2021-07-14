@@ -30,9 +30,15 @@ resource "google_compute_instance" "vm_instances" {
             
           }
         }
-
-        #metadata_startup_script = file("../../Googleproject/compute_instance/mem_vm.sh")                              //Note: specify the path to '"apache2.sh" file in  the system direcotry  from where you run the code;In case the github path dosent work
-
+  
+       dynamic "service_account"{
+                for_each = [var.service_account]
+                content{
+                  email  = lookup(service_account.value, "email", null)
+                  scopes = lookup(service_account.value, "scopes", null)
+                }
+       }
+        
         
 
 }
