@@ -1,48 +1,13 @@
-#tag 
-module "gcs_bucket1456" {  
-source = "./modules/gcs" 
-name = "secops-316111-bucket-1944" 
-project_id = "secops-316111" 
-location = "US-CENTRAL1"
+module "test-bucket-1" {
+  source      = "./modules/gcs"
+  name        = var.bucket_name
+  project_id  = var.project_id
+  location    = var.location
+  storage_class= "REGIONAL"
+  uniform_bucket_level_access_gcs= true
+  iam_members = [{
+    role   = "roles/storage.objectViewer"
+    member = "serviceAccount:randoms@expanded-origin-316105.iam.gserviceaccount.com"
+  }]
+ 
 }
-
-#tag 
-module "gcs_bucket1529" {  
-source = "./modules/gcs" 
-name = "secops-316111-bucket-1719" 
-project_id = "secops-316111" 
-location = "US-CENTRAL1"
-}
-
-#tag 
-module "gcs_bucket1789" {  
-source = "./modules/gcs" 
-name = "secops-316111-bucket-1423" 
-project_id = "secops-316111" 
-location = "US-CENTRAL1"
-}
-
-#tag 
-module "gcs_bucket1701" {  
-source = "./modules/gcs" 
-name = "secops-316111-bucket-1800" 
-project_id = "secops-316111" 
-location = "US-CENTRAL1"
-}
-
-#tag 
-module "gcs_bucket1274" {  
-source = "./modules/gcs" 
-name = "secops-316111-bucket-1755" 
-project_id = "secops-316111" 
-location = "US-CENTRAL1"
-}
-
-#tag 
-module "gcs_bucket1821" {  
-source = "./modules/gcs" 
-name = "secops-316111-bucket-1446" 
-project_id = "secops-316111" 
-location = "US-CENTRAL1"
-}
-
