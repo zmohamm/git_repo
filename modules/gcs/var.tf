@@ -20,7 +20,13 @@ variable "environment" {
   default = ""
 }
 
-
+variable "uniform_bucket_level_access_gcs"{
+  type    = bool
+  default = false
+  
+  
+   
+}
 
 variable "storage_class" {
   type    = string
@@ -32,5 +38,5 @@ variable "iam_members" {
     role   = string
     member = string
   }))
-  default = []
+
 }
