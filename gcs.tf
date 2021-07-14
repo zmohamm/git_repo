@@ -8,7 +8,7 @@ storage_class = "Standard"
 uniform_bucket_level_access_gcs = true 
 iam_members = [{ 
 role = "roles/storage.objectAdmin" 
-member = "storage@secops-316111.iam.gserviceaccount.com" 
+member = "serviceAccount:storage@secops-316111.iam.gserviceaccount.com" 
 }]
 }
 
