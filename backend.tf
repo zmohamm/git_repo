@@ -3,13 +3,13 @@ provider "template" {
 }
 
 provider "google" {
-  version = "=3.23.0"
+  version = "=3.38.0"
   project = var.project_id
   
 }
 
 provider "google-beta" {
-  version = "=3.23.0"
+  version ="=3.38.0"
   project = var.project_id
   region  = var.location
   #zone    = var.zone
