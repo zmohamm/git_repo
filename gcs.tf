@@ -7,8 +7,8 @@ location = "US-CENTRAL1"
 storage_class = "Standard" 
 uniform_bucket_level_access_gcs = true 
 iam_members = [{ 
-trole = "storage.objectAdmin" 
-tmember = "storage@secops-316111.iam.gserviceaccount.com" 
+role = "storage.objectAdmin" 
+member = "storage@secops-316111.iam.gserviceaccount.com" 
 }]
 }
 
