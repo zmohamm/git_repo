@@ -46,6 +46,14 @@ variable "disk_type" {
   
 }
 
+variable "service_account" {
+  type = object({
+    email  = string,
+    scopes = set(string)
+  })
+  
+}
+
 
 
 variable "zone" {
