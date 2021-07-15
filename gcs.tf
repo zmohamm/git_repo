@@ -1,7 +1,7 @@
 module "test-bucket-1" {
 
  
-source = "./module/gcs"
+source = "./modules/gcs"
 
  
 name = "${var.project_name}-test-bucket-1"
