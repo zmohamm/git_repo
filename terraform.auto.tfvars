@@ -1,4 +1,4 @@
-vm_name= "vminstancego1236"
+vm_name= "vminstancego12"
 project_id= "secops-316111"
 bucket_name = "indcoe_26122"
 location =   "US-CENTRAL1"
