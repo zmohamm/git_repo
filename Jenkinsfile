@@ -21,14 +21,14 @@ pipeline {
                 sh 'terraform plan -out=plan -lock=false'
             }
         }
-        stage ("terraform apply") {
+        stage ("terraform apply -lock=false") {
             when{
                 expression{
                     BRANCH_NAME == 'main'
                 }
             }
             steps {
-                sh 'terraform apply --auto-approve'
+                sh 'terraform apply --auto-approve -lock=false'
             }
         }
     }
