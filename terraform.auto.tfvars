@@ -1,5 +1,5 @@
 vm_name= "vminstancego1236"
-project_id= "secops-316111"
+project_id= "gcp-cube-321106"
 bucket_name = "indcoe_26122"
 location =   "US-CENTRAL1"
 dataset_location= "US"
