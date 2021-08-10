@@ -18,7 +18,7 @@ provider "google-beta" {
 terraform {
   required_version = "=1.0.0"
   backend "gcs" {
-    bucket = "gcs-jenkins-tf-backend"
+    bucket = "gcs-jenkins-tf-backend1"
     prefix = "terraform/statefile"
    
    
